@@ -1,13 +1,12 @@
-import 'package:car_rent_app/Pages/forget_password.dart';
-import 'package:car_rent_app/Pages/register_page.dart';
+import 'package:car_rent_app/Pages/login_page.dart';
 import 'package:car_rent_app/Widgets/button.dart';
 import 'package:car_rent_app/Widgets/input_widget.dart';
 import 'package:car_rent_app/Widgets/input_widget_withicon.dart';
 import 'package:car_rent_app/Widgets/login_with_social.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Welcome to, Rentifi 👌",
+                "Nice to know you! 😉",
                 style: TextStyle(
                   color: Color(0xff172b87),
                   fontSize: 25,
@@ -36,7 +35,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "Enter Your Rentifi acoount to continue.",
+                "It's your first time to use Rentifi.",
                 style: TextStyle(
                   color: Color(0xff172b87).withOpacity(0.5),
                   fontSize: 15,
@@ -48,7 +47,23 @@ class LoginPage extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                "Email address",
+                "Full Name",
+                style: TextStyle(
+                  color: Color(0xff172b87),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              InputField(HintText: "Your email address"),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Email Address",
                 style: TextStyle(
                   color: Color(0xff172b87),
                   fontSize: 20,
@@ -79,34 +94,9 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              InputButton(ButtonText: "Login", onPressed: () {},),
+              InputButton(ButtonText: "Register", onPressed: () {  },),
               SizedBox(
-                height: 5,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const ForgotPasswordPage()),
-                      );
-                    },
-                    child: Text(
-                      "Forget Pasword",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xff172b87),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 5,
+                height: 30,
               ),
               Row(
                 children: [
@@ -119,7 +109,7 @@ class LoginPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Text(
-                      "or login with",
+                      "or register with",
                       style: TextStyle(
                         color: Color(0xff172b87).withOpacity(0.7),
                         fontFamily: 'Poppins',
@@ -148,7 +138,7 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Didn't have a Rentifi account",
+                      "Already have a Rentifi account",
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 13,
@@ -159,14 +149,14 @@ class LoginPage extends StatelessWidget {
                   ),
                   Center(
                     child: TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const RegisterPage()),
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
                         );
                       },
                       child: Text(
-                        "Register",
+                        "Login",
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 13,
