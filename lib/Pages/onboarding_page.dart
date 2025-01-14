@@ -114,7 +114,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 _pages[_currentPage]['title']!,
                 style: TextStyle(
                   color: Color(0xff172b87),
-                  fontFamily: 'poppins',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w700,
                   fontSize: 25,
                 ),
@@ -126,7 +126,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 _pages[_currentPage]['description']!,
                 style: TextStyle(
                   color: Color(0xff172b87).withOpacity(0.5),
-                  fontFamily: 'poppins',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
                   fontSize: 15,
                 ),
@@ -161,6 +161,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         child: Text(
                           "Skip",
                           style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Color(0xff172b87),
                             fontWeight: FontWeight.bold,
                           ),
@@ -177,6 +178,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           child: Text(
                             _currentPage == 2 ? "Continue" : "Next",
                             style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
