@@ -5,6 +5,9 @@ import 'package:car_rent_app/Widgets/input_widget_withicon.dart';
 import 'package:car_rent_app/Widgets/login_with_social.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/bottom_nav.dart';
+import 'home_page.dart';
+
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
 
@@ -94,7 +97,13 @@ class RegisterPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              InputButton(ButtonText: "Register", onPressed: () {  },),
+              InputButton(ButtonText: "Register", onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CustomBottomNavBar()),
+                );
+              },
+              ),
               SizedBox(
                 height: 30,
               ),

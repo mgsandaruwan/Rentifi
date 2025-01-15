@@ -64,9 +64,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
