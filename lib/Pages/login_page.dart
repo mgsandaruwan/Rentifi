@@ -1,10 +1,13 @@
 import 'package:car_rent_app/Pages/forget_password.dart';
+import 'package:car_rent_app/Pages/home_page.dart';
 import 'package:car_rent_app/Pages/register_page.dart';
 import 'package:car_rent_app/Widgets/button.dart';
 import 'package:car_rent_app/Widgets/input_widget.dart';
 import 'package:car_rent_app/Widgets/input_widget_withicon.dart';
 import 'package:car_rent_app/Widgets/login_with_social.dart';
 import 'package:flutter/material.dart';
+
+import '../Widgets/bottom_nav.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -79,7 +82,15 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              InputButton(ButtonText: "Login", onPressed: () {},),
+              InputButton(
+                ButtonText: "Login",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CustomBottomNavBar()),
+                  );
+                },
+              ),
               SizedBox(
                 height: 5,
               ),
@@ -90,7 +101,8 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const ForgotPasswordPage()),
+                        MaterialPageRoute(
+                            builder: (context) => const ForgotPasswordPage()),
                       );
                     },
                     child: Text(
@@ -159,10 +171,11 @@ class LoginPage extends StatelessWidget {
                   ),
                   Center(
                     child: TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const RegisterPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterPage()),
                         );
                       },
                       child: Text(
