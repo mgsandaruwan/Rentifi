@@ -6,7 +6,7 @@ class SearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10.0,bottom: 8.0),
+      padding: const EdgeInsets.only(top: 10.0, bottom: 8.0),
       child: Container(
         height: 45,
         decoration: BoxDecoration(
@@ -22,7 +22,8 @@ class SearchBox extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Icon(Icons.search,
+              child: Icon(
+                Icons.search,
                 color: Color(0xff172b87).withOpacity(0.6),
                 size: 30,
               ),
@@ -37,6 +38,17 @@ class SearchBox extends StatelessWidget {
                   ),
                   border: InputBorder.none,
                 ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0),
+              child: IconButton(
+                onPressed: () {
+                  //advanced filter
+                },
+                icon: Icon(Icons.filter_list_rounded),
+                color: Color(0xff172b87).withOpacity(0.5),
+                iconSize: 25,
               ),
             ),
           ],
