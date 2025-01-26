@@ -25,6 +25,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: _pages[_currentIndex], // The main body content
 
       // Custom Bottom Navigation Bar
